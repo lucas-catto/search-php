@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+/* Reset */
+
+* {
+    margin:           0;
+    padding:          0;
+    border:           0;
+    box-sizing:       border-box;
+    font-family:      'Roboto', sans-serif;
+    
+    outline:          none; /* * */
+    list-style:       none; /* * */
+    text-decoration:  none; /* * */
+}
+
+:root {
+    --defaultBlue:    rgb(12, 6, 48);
+    --defaultWhite:   rgb(255, 255, 255);
+    --defaultBlack:   rgb(0, 0, 0);
+    --defaultRed:     rgb(255, 0, 0);
+}
+
+html, body {
+    width:            100%;
+    height:           100%;
+}
+
+body {
+    background-color: var(--defaultBlue);
+
+    display:          flex;
+    flex-direction:   column;
+}
+
+main { flex: 1; }
+
+header,
+main,
+footer
+{ display: flex; }
+
+/* Header */
+
+header {
+    padding:          22px;
+    width:            100%;
+    max-width:        100%;
+    height:           auto;
+    border-bottom:    2px solid var(--defaultWhite);
+    
+    flex-direction:   column;
+    justify-content:  center;
+    align-items:      center;
+    gap:              10px;
+}
+
+header a { color: var(--defaultWhite); }
+
+header form {
+    padding:          8px;
+    width:            100vw;
+    max-width:        40vw;
+    height:           auto;
+    border:           2px solid var(--defaultWhite);
+    border-radius:    8px;
+    
+    display:          flex;
+    gap:              10px;
+}
+
+header form input[type="text"] {
+    padding:          8px 12px;
+    width:            100%;
+    max-width:        80%;
+    height:           auto;
+    border-radius:    6px;
+    font-size:        10pt;
+    border:           2px solid var(--defaultWhite);
+}
+
+header form input[type="text"]:focus {
+    background-color: var(--defaultBlue);
+    color:            var(--defaultWhite);
+}
+
+header form button[type="submit"] {
+    width:            100%;
+    max-width:        20%;
+    height:           auto;
+    font-size:        12pt;
+    border-radius:    8px;
+    border:           2px solid var(--defaultWhite);
+}
+
+header form button[type="submit"]:hover {
+    background-color: var(--defaultBlue);
+    color:            var(--defaultWhite);
+}
+
+/* Main */
+
+main {
+    padding:          30px 0;
+    width:            100%;
+    max-width:        100%;
+    height:           auto;
+
+    flex-direction:   column;
+    align-items:      center;
+    gap:              15px;
+}
+
+main .results { color: var(--defaultWhite); }
+
+main .card {
+    padding:          8px 4px;
+    width:            100%;
+    max-width:        90%;
+    height:           auto;
+    color:            var(--defaultWhite);
+    border:           2px solid var(--defaultWhite);
+    border-radius:    4px;
+
+    display:          flex;
+}
+
+main .card .id {
+    width:            100%;
+    max-width:        10%;
+}
+
+main .card .name {
+    width:            100%;
+    max-width:        45%;
+}
+
+main .card .username {
+    width:            100%;
+    max-width:        45%;
+}
+
+/* Footer */
+
+footer {
+    padding:          6px 0;
+    width:            100%;
+    max-width:        100%;
+    height:           auto;
+    color:            var(--defaultWhite);
+    border-top:       2px solid var(--defaultWhite);
+
+    justify-content:  center;
+    text-align:       center;
+}
+
+footer a       { color:         var(--defaultWhite);         }
+footer a:hover { border-bottom: 1px solid var(--defaultRed); }
